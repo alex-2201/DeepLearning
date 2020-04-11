@@ -7,6 +7,10 @@ verify_ssl = true
 
 [packages]
 numpy = "*"
+matplotlib = "*"
+h5py = "*"
+scipy = "*"
+pillow = "*"
 
 [requires]
 python_version = "3.7"
