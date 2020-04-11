@@ -22,10 +22,20 @@ def normalizeRows(x):
     return x
 
 
-def sofmax(x):
+def softmax(x):
     x_exp = np.exp(x)
     x_sum = np.sum(x_exp, axis=1, keepdims=True)
     s = x_exp / x_sum
     return s
+
+
+def L1(yhat, y):
+    loss = np.sum(np.abs(y - yhat))
+    return loss
+
+
+def L2(yhat, y):
+    loss = np.sum((y - yhat) ** 2)
+    return loss
 
 
